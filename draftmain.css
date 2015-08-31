@@ -1,0 +1,290 @@
+
+/***************************** my stuff ****************************/
+
+.wrapper {
+  display: flex;
+  text-align:center;
+}
+
+.tshirt-container {
+  padding: 10px;
+}
+
+.box {
+  flex: 100%;
+  width: 380px;
+  background-color: white;
+  border: 3px solid #6DACE2;
+}
+
+.top-box {
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  float: right;
+  border-left: 2px solid #6DACE2;
+  border-bottom:2px solid #6DACE2;
+  display: flex;
+  align-items: center;
+}
+
+.shirt {
+  height: 380px;
+}
+
+.shirt img {
+  margin: 20px;
+  max-width: 300px;
+}
+/******************************action list********************************/
+.selections {
+  flex: 1;
+  flex: 100;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 380px;
+}
+
+.selections > ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  height: 65px;
+  margin: 0;
+  border: 0px solid #6DACE2;
+  padding: 0;
+}
+
+.bar{
+  border-right: 3px solid #6DACE2;
+  border-top:3px solid #6DACE2;
+  background: white;
+  flex: 1;
+  font-size: 1.3em;
+  color: #6DACE2;
+  font-weight: bold;
+}
+
+
+}
+.pop-up-menu li i{
+  background:white;
+  color:blue;
+
+}
+
+.selections li,
+.top-box i{
+  display: flex;
+  align-items: center;
+  text-align:none;
+}
+span {margin:0 auto;}
+
+.third:hover {
+
+  border-top:none;
+}
+
+
+.top-box i {
+  font-size: 1.2em;
+  color: #6DACE2;
+}
+
+i,
+.top-box i {
+  margin: 0 auto;
+}
+.top-box i { padding:9px;
+}
+
+
+/******************* Foooooooter *******************/
+
+footer {
+  display: flex;
+  flex: 100%;
+  justify-content: space-between;
+  margin: 0;
+}
+
+p {
+  color: #6DACE2;
+  font-size: 20px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+/*********************** hovers **********************/
+.top-box:hover i, .bar:hover {
+  background-color: #6DACE2;
+  color:#FFF;
+}
+
+
+
+
+
+
+
+
+/************************ Pop up list ************************/
+.pop-up-list{
+  display:flex;
+	position: relative;
+	background: #FFF;
+	border: 2px solid #6DACE2;
+  padding:0;
+}
+.pop-up-list:after, .pop-up-list:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.pop-up-list:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #FFF;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.pop-up-list:before {
+	border-color: rgba(109, 172, 226, 0);
+	border-top-color: #6DACE2;
+	border-width: 24px;
+	margin-left: -24px;
+}
+
+
+
+
+
+.pop-up-list li, .color-list{
+  display:flex;
+  flex:100%;
+
+}
+.pop-up-menu i{
+flex:1;
+
+}
+
+
+
+.third {
+
+  position:relative;
+}
+
+ul.pop-up-list {
+  position: absolute;
+  width: 100px;
+  height: 213px;
+  top: -215px;
+  right: -2px;
+  visibility:hidden;
+  display:flex;
+}
+
+li:hover ul.pop-up-list {
+  width:100%;
+  visibility:visible;
+  flex-direction:column;
+}
+
+.pop-up-list li:hover, .pop-up-list li:hover i, .color-list:hover{
+  background-color: #6DACE2;
+  color:#FFF;
+}
+
+/*************** 2nd Popup list****************/
+
+.color-list {
+
+  list-style:none;
+}
+
+.fourth {
+
+  position:relative;
+}
+.color-menu {
+  display:flex;
+}
+.color-list {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -100px;
+  right: -6px;
+  visibility:visible;
+  padding:0;
+  flex-wrap:wrap;
+}
+
+.color-list .blue {
+  width:50px;
+  background:#6DACE2;}
+
+.color-list .pink {
+  background:#CA699A;
+  width:50px;
+}
+.color-list .yellow {
+  background:#D4A266;
+  width:50px;
+  margin:5px;
+
+}
+
+.color-list .green {
+  background:#78AE34;
+  width:50px;
+
+}
+
+
+}
+
+
+
+/***************** 3d rotation ****************/
+
+
+.tshirt-container {
+  position: relative;
+  width: 380px;
+  height: 100%;
+  z-index: 1;
+}
+.tshirt-container {
+  perspective: 1000;
+}
+#f1_card {
+ display:flex;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+}
+.top-box:hover  + #f1_card {
+  transform: rotateY(180deg);
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.face.back {display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+
+}
